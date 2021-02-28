@@ -59,10 +59,12 @@ int main() {
 		}
 		index = 0;
 		while(input.get(cI)) {
-			
 			output << (char)Enctriptor(keysArray[index], cI);
-			index++;
+			if(index == 21) {
+				index = 0;
+			} else index++;
 		}
+		std::cout << "Il testo criptato è stato salvato in: ./encripted.txt";
 		keys.close();
 		input.close();
 		output.close();
@@ -92,8 +94,11 @@ int main() {
 		index = 0;
 		while(input.get(cI)) {
 			output << Decriptor(keysArray[index], cI);
-			index++;
+			if(index == 21) {
+				index = 0;
+			} else index++;
 		}
+		std::cout << "Il testo decriptato è stato salvato in: ./decripted.txt";
 		keys.close();
 		input.close();
 		output.close();
@@ -106,6 +111,7 @@ int main() {
 			output << key[index];
 			index++;
 		}
+		std::cout << "Una nuova Key è stata generata nel file: ./Key.txt";
 		system("PAUSE");
 	} else exit(0);
 	
