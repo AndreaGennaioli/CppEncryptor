@@ -13,8 +13,6 @@ char Enctriptor(char key, char input) {
 char Decriptor(char key, char input) {
 	return ((int) input - (int) key) - 10;
 }
-// key:  becd al posto di abcd quindi:
-// se txt:  abcd => becd
 
 std::string  gen_random(int len) {
 	std::srand(time(NULL));
@@ -64,7 +62,7 @@ int main() {
 				index = 0;
 			} else index++;
 		}
-		std::cout << "Il testo criptato è stato salvato in: ./encripted.txt";
+		std::cout << "Il testo criptato ï¿½ stato salvato in: ./encripted.txt";
 		keys.close();
 		input.close();
 		output.close();
@@ -98,7 +96,7 @@ int main() {
 				index = 0;
 			} else index++;
 		}
-		std::cout << "Il testo decriptato è stato salvato in: ./decripted.txt";
+		std::cout << "Il testo decriptato ï¿½ stato salvato in: ./decripted.txt";
 		keys.close();
 		input.close();
 		output.close();
@@ -111,7 +109,7 @@ int main() {
 			output << key[index];
 			index++;
 		}
-		std::cout << "Una nuova Key è stata generata nel file: ./Key.txt";
+		std::cout << "Una nuova Key ï¿½ stata generata nel file: ./Key.txt";
 		system("PAUSE");
 	} else exit(0);
 	
